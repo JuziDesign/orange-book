@@ -1,7 +1,9 @@
 mod route_handle;
+mod menu;
 
 use tauri::Manager;
 use crate::route_handle::event_handle;
+use crate::menu as app_menu;
 
 
 fn main() {
@@ -17,7 +19,8 @@ fn main() {
             }
             Ok(())
         })
-        .menu(tauri::Menu::os_default(&context.package_info().name))
+        .menu(app_menu::menu::create_custom_menu())
+        .on_menu_event(app_menu::custom_event_click)
         .invoke_handler(tauri::generate_handler![event_handle::handler_event1])
         .run(context)
         .expect("error while running tauri application");

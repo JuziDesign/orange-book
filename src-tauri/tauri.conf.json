@@ -58,9 +58,8 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "橘子世界",
-        "width": 800,
-        "decorations": false
+        "title": "",
+        "width": 800
       }
     ]
   }
