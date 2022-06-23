@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'tdesign-react/es/style/index.css';
+import '@src/styles/global.less';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
